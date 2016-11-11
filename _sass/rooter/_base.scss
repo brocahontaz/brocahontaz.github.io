@@ -1,0 +1,41 @@
+/*
+Reset of basic elements
+*/
+html, body, div, header, nav, main, section, footer{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: $base-width;
+	height: $base-height;
+}
+
+/*
+Basic styling
+*/
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	background-color: $background-color;
+	width: $base-width;
+	height: $base-height;
+}
+
+body-wrapper {
+	width: $base-width;
+	height: $base-height;
+}
+
+/*
+Headlines
+*/
+
+/*
+Clearfix
+*/
+%clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

@@ -1,0 +1,82 @@
+/*
+Header
+*/
+header {
+	background-color: $header-background-color2;
+	height: $header-height;
+	width: $base-width;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+#header-wrapper {
+	position: relative;
+	margin: $center;
+	padding-top: $header-padding-top;
+	padding-bottom: $header-padding;
+	width: $content-width;
+
+	@extend %clearfix;
+
+	@include media-query($smaller-screen) {
+		width: $base-width - 4%;
+		padding: 2%;
+	}
+}
+
+#header-top {
+	position: relative;
+	width: $base-width;
+
+	@extend %clearfix;
+}
+
+/*
+Logo
+*/
+#logo-container {
+	float: left;
+}
+
+#logo-img {
+	height: $logo-height;
+}
+
+/*
+Main content styling
+*/
+main {
+	position: relative;
+	width: $base-width;
+	height: auto;
+	@extend %clearfix;
+}
+
+#home-headline {
+	margin-top: 0;
+	position: relative;
+	background-color: $header-background-color2;
+	height: $home-headline-height;
+	width: $base-width;
+}
+
+#home-headline-content {
+	
+}
+
+#front-page {
+	width: 500px;
+	color: #fff;
+	font-weight: lighter;
+	font-size: 1.2rem;
+	margin: $center;
+}
+
+/*
+Navigation
+*/
+nav {
+	float: right;
+	margin-top: 20px
+}

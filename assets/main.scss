@@ -1,0 +1,42 @@
+---
+# front matter yeh
+---
+
+// Margins
+$center: 0 auto;
+
+// Fonts
+$base-font-family: "Roboto", Arial, sans-serif;
+$body-font-size: 62.5%;
+$base-font-size: 1.6rem;
+$base-line-height: 1.8rem;
+
+// Background
+$background-color: #fff;
+
+// Content
+$base-width: 100%;
+$base-height: 100%;
+$content-width: 1200px;
+
+// Header
+$header-background-color: #fff;
+$header-background-color2: #9245d5;
+$header-height: auto;
+$header-padding: 20px;
+$header-padding-top: 30px;
+$home-headline-height: 60vh; 
+
+// Logo img
+$logo-height: 50px;
+
+// Media queries
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+$smaller-screen: 1200px;
+
+// Import partials
+@import "rooter";
