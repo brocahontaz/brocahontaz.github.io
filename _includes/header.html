@@ -1,16 +1,20 @@
 <header>
 	<div id="header-wrapper">	
-			<div id="logo-container">
-				<a href="{{ "/"  | relative_url }}">
-					<img src="/assets/img/logo-white-small.png" id="logo-img" alt="Rooter.se logo">
-				</a>
-			</div>
-			<nav>
+		<div id="logo-container">
+			<a href="{{ "/"  | relative_url }}">
+				<img src="/assets/img/logo-white-small.png" id="logo-img" alt="Rooter.se logo">
+			</a>
+		</div>
+		<nav>
+			<ul>
 				{% for my_page in site.pages %}
 				{% if my_page.title %}
-				<a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+				<li>
+					<a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+				</li>
 				{% endif %}
 				{% endfor %}
-			</nav>
+			</ul>
+		</nav>
 	</div>
 </header>

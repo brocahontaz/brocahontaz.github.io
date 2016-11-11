@@ -5,27 +5,39 @@
 // Margins
 $center: 0 auto;
 
+// Some colors
+$brand-color: #9245d5;
+$darker-brand-color: #610AAD;
+$darker-brand-color2: #6f32a3;
+
+// Background
+$background-color: #2d2d2d;
+$content-background-color: #fff;
+
 // Fonts
-$base-font-family: "Roboto", Arial, sans-serif;
+$base-font-family: 'Roboto', sans-serif;
+$second-font-family: 'Open Sans', sans-serif;
 $body-font-size: 62.5%;
 $base-font-size: 1.6rem;
 $base-line-height: 1.8rem;
-
-// Background
-$background-color: #fff;
+$base-font-weight: 400;
 
 // Content
 $base-width: 100%;
 $base-height: 100%;
 $content-width: 1200px;
+$content-text-width: 800px;
+
+// Page headlines
+$page-headline-height: 150px;
 
 // Header
 $header-background-color: #fff;
-$header-background-color2: #9245d5;
+$header-background-color2: $brand-color;
 $header-height: auto;
 $header-padding: 20px;
 $header-padding-top: 30px;
-$home-headline-height: 60vh; 
+$home-headline-height: 70vh; 
 
 // Logo img
 $logo-height: 50px;

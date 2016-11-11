@@ -15,21 +15,70 @@ html {
 Basic styling
 */
 body {
-	font-family: $base-font-family;
+	font-family: $second-font-family;
 	font-size: $base-font-size;
 	background-color: $background-color;
 	width: $base-width;
 	height: $base-height;
 }
 
-body-wrapper {
+#body-wrapper {
+	position: relative;
 	width: $base-width;
-	height: $base-height;
+	min-height: $base-height;
 }
 
 /*
-Headlines
+Headers
 */
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	font-family: $base-font-family;
+}
+
+
+/*
+Paragraphs
+*/
+
+
+/*
+Links
+*/
+a.white-to-purple {
+	color: #ffffff;
+	text-decoration: none;
+
+	&:hover {
+		color: $darker-brand-color;
+	}
+}
+
+a.no-style {
+	text-decoration: none;
+}
+
+/*
+Images
+*/
+#logo-img {
+	height: $logo-height;
+}
+
+#about-image {
+	width: 160px;
+	border: 3px solid #000;
+	float: left;
+	margin-right: 20px;
+}
+
+#footer-img {
+	float: left;
+	width: 80px;
+	border: 2px solid #fff;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
 
 /*
 Clearfix

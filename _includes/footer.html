@@ -1,2 +1,35 @@
 <footer>
+	<div id="footer-content">
+		<div id="footer-content-wrapper">
+			<div class="footer-item">
+				<h1> {{site.title}} </h1>
+				<p>
+					<img src="/assets/img/johan.png" id="footer-img" alt="Johan">
+					{{site.description}}
+				</p>
+			</div>
+			<div class="footer-item">
+				<h1> Social media </h1>
+				<p>
+					{{site.description}}
+				</p>
+			</div>
+			<div class="footer-item">
+				<h1> Map </h1>
+					<ul>
+						{% for my_page in site.pages %}
+						{% if my_page.title %}
+						<li>
+							<a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+							<p> {{my_page.linkdesc}}</p>
+						</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer-bottom">
+		Copyright © 2015-2017 Rooter.se / All rights reserved / Website developed by Johan Andersson
+	</div>
 </footer>
