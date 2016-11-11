@@ -7,12 +7,16 @@ $center: 0 auto;
 
 // Some colors
 $brand-color: #9245d5;
+//$brand-color: #40b3ec;
 $darker-brand-color: #610AAD;
 $darker-brand-color2: #6f32a3;
+$darker-brand-color3: #592882;
 
 // Background
 $background-color: #2d2d2d;
 $content-background-color: #fff;
+
+$background-image: url('/assets/img/bg/bg2.jpg');
 
 // Fonts
 $base-font-family: 'Roboto', sans-serif;
@@ -37,7 +41,7 @@ $header-background-color2: $brand-color;
 $header-height: auto;
 $header-padding: 20px;
 $header-padding-top: 30px;
-$home-headline-height: 70vh; 
+$home-headline-height: 90vh; 
 
 // Logo img
 $logo-height: 50px;
@@ -48,7 +52,8 @@ $logo-height: 50px;
 		@content;
 	}
 }
-$smaller-screen: 1200px;
+$smaller-screen: 1220px;
+$mobile-screen: 840px;
 
 // Import partials
 @import "rooter";

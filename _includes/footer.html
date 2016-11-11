@@ -1,3 +1,8 @@
+<a href="/about/" class="no-style">
+	<div id="footer-top-border">
+		Learn more about Johan &#187;
+	</div>
+</a>
 <footer>
 	<div id="footer-content">
 		<div id="footer-content-wrapper">
@@ -10,22 +15,35 @@
 			</div>
 			<div class="footer-item">
 				<h1> Social media </h1>
-				<p>
-					{{site.description}}
-				</p>
+				<ul>
+					<li>
+
+						<p>
+							<img src="/assets/img/github-logo.png" alt="Github logo" class="social-media-img">
+							View <a href="https://github.com/{{ site.github_username }}" class="no-style" target="_blank">@{{ site.github_username }}</a> on GitHub for open-source projects, school work and own projects
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="/assets/img/twitter-logo.png" alt="Twitter logo" class="social-media-img">
+							Follow <a href="https://twitter.com/{{ site.github_username }}" class="no-style" target="_blank">@{{ site.twitter_username }}</a> on Twitter for news and opinions
+						</p>
+					</li>
+
+				</ul>
 			</div>
 			<div class="footer-item">
 				<h1> Map </h1>
-					<ul>
-						{% for my_page in site.pages %}
-						{% if my_page.title %}
-						<li>
-							<a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-							<p> {{my_page.linkdesc}}</p>
-						</li>
-						{% endif %}
-						{% endfor %}
-					</ul>
+				<ul>
+					{% for my_page in site.pages %}
+					{% if my_page.title %}
+					<li>
+						<a href="{{ my_page.url | relative_url }}" class="nav">{{ my_page.title | escape }}</a>
+						<p> {{my_page.linkdesc}}</p>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
 	</div>

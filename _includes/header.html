@@ -17,4 +17,9 @@
 			</ul>
 		</nav>
 	</div>
+	{% if page.layout == 'home' %}
+	{% include home-headline.html %}
+	{% else %}
+	{% include page-headline.html %}
+	{% endif %}
 </header>

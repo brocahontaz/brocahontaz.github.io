@@ -1,0 +1,16 @@
+<div id="home-headline">
+	<div id="home-headline-content">
+		<div id="home-headline-content-box">
+			<h1>Johan Andersson - Full stack developing</h1>
+			<p>
+				HTML &#9679; CSS &#9679; PHP &#9679; JavaScript &#9679; Java &#9679; SQL
+			</p>
+			<p class="lower">
+				<a href="#projects" class="white-to-purple">
+					VIEW MY PROJECTS<br>
+					&#9660;
+				</a>
+			</p>
+		</div>
+	</div>
+</div>

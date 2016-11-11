@@ -2,7 +2,10 @@
 Header
 */
 header {
-	background-color: $header-background-color2;
+	/*background-color: $header-background-color2;*/
+	background-image: $background-image;
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: $header-height;
 	width: $base-width;
 	position: relative;
@@ -56,6 +59,12 @@ main {
 	width: $base-width;
 	margin-bottom: 60px;
 	margin-top: 60px;
+	@extend %clearfix;
+}
+
+#main-content.home {
+	margin-top: 0px;
+	padding-bottom: 60px;
 }
 
 #main-content-wrapper {
@@ -63,6 +72,11 @@ main {
 	background-color: $content-background-color;
 	width: $content-width;
 	margin: $center;
+	@extend %clearfix;
+	@include media-query($smaller-screen) {
+		width: $base-width - 4%;
+		padding: 2%;
+	}
 }
 
 #main-content-text {
@@ -71,17 +85,69 @@ main {
 	width: $content-text-width;
 	margin: $center;
 
+	@include media-query($mobile-screen) {
+		width: $base-width;
+	}
+
 	p {
 		margin: 0;
 		padding: 0;
+
 	}
 }
 
-// Page headlines
+/*
+Home page items
+*/
+.home-item {
+	float: left;
+	width: $base-width / 3;
+	margin: 0;
+	padding: 0;
+
+	&:nth-child(2) {
+		background-color: #7128b0;
+	}
+
+	&:nth-child(3) {
+		background-color: #4b2070;
+	}
+
+	&:nth-child(4) {
+		background-color: #2d1343;
+	}
+
+	&:nth-child(5) {
+		background-color: #7e4ca9;
+	}
+
+	&:nth-child(6) {
+		background-color: #9a5ccf;
+	}
+
+	&:nth-child(7) {
+		background-color: #ad68e9;
+	}
+
+	&:hover {
+		.home-item-img {
+			
+		}
+	}
+}
+
+.home-item-content {
+	float: left;
+	width: $base-width;
+}
+
+/*
+Page headlines
+*/
 #home-headline {
 	margin-top: 0;
 	position: relative;
-	background-color: $header-background-color2;
+	/*background-color: $header-background-color2;*/
 	height: $home-headline-height;
 	width: $base-width;
 }
@@ -129,7 +195,7 @@ main {
 #page-headline {
 	margin-top: 0;
 	position: relative;
-	background-color: $header-background-color2;
+	/*background-color: $header-background-color2;*/
 	height: $page-headline-height;
 	width: $base-width;
 }
@@ -246,16 +312,16 @@ footer {
 #footer-top-border {
 	width: $base-width;
 	height: 50px;
-	background-color: $brand-color;
+	background-color: $darker-brand-color2;
 	text-align: center;
 	color: #fff;
 	font-family: $second-font-family;
 	font-weight: 400;
 	font-size: 1.0rem;
 	line-height: 50px;
-	margin-bottom: -60px;
+	margin-bottom: 0px;
 	&:hover {
-		background-color: $darker-brand-color2;
+		background-color: $darker-brand-color3;
 	}
 }
 
@@ -315,6 +381,18 @@ footer {
 		}
 	}
 	a {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		font-weight: 600;
+		color: #fff;
+
+		&:hover {
+			color: $brand-color;
+		}
+	}
+
+	a.nav {
 		margin: 0;
 		padding: 0;
 		display: block;
