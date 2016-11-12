@@ -45,7 +45,7 @@ Paragraphs
 /*
 Links
 */
-a.white-to-purple {
+a.white-to-dark {
 	color: #ffffff;
 	text-decoration: none;
 
@@ -75,7 +75,7 @@ Images
 #footer-img {
 	float: left;
 	width: 80px;
-	border: 2px solid #fff;
+	border: 2px solid $headline-color;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
@@ -91,7 +91,7 @@ Images
 	margin: 15%;
 	padding: 0;
 	display: block;
-	border: 5px solid #fff;
+	border: 5px solid $headline-color;
 }
 
 /*

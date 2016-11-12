@@ -6,11 +6,15 @@
 $center: 0 auto;
 
 // Some colors
-$brand-color: #9245d5;
-//$brand-color: #40b3ec;
-$darker-brand-color: #610AAD;
-$darker-brand-color2: #6f32a3;
-$darker-brand-color3: #592882;
+
+
+// Brand colors
+$headline-color: #fff;
+$lighter-brand-color: #dfb09d;
+$light-brand-color: #da9288;
+$mid-brand-color: #b17174;
+$darker-brand-color: #582a45;
+$darkest-brand-color: #2f153f;
 
 // Background
 $background-color: #2d2d2d;
@@ -35,16 +39,21 @@ $content-text-width: 800px;
 // Page headlines
 $page-headline-height: 150px;
 
-// Header
-$header-background-color: #fff;
-$header-background-color2: $brand-color;
-$header-height: auto;
-$header-padding: 20px;
-$header-padding-top: 30px;
-$home-headline-height: 90vh; 
-
 // Logo img
 $logo-height: 50px;
+
+// Header
+$header-background-color: #headline-color;
+$header-background-color2: $headline-color;
+$header-height: 50px;
+$header-padding: 20px;
+$header-padding-top: 30px;
+$home-headline-height: calc(100vh - 100px); 
+
+// Responsive values
+$responsive-width: $base-width - 4%;
+$responsive-padding: 2%;
+$responsive-home-headline: calc(100vh - 50px);
 
 // Media queries
 @mixin media-query($device) {
@@ -54,6 +63,7 @@ $logo-height: 50px;
 }
 $smaller-screen: 1220px;
 $mobile-screen: 840px;
+$smaller-mobile-screen: 670px;
 
 // Import partials
 @import "rooter";

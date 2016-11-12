@@ -6,11 +6,12 @@ header {
 	background-image: $background-image;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: $header-height;
+	height: auto;
 	width: $base-width;
 	position: relative;
 	padding: 0;
 	margin: 0;
+	/*@extend %clearfix;*/
 }
 
 #header-wrapper {
@@ -19,12 +20,12 @@ header {
 	padding-top: $header-padding-top;
 	padding-bottom: $header-padding;
 	width: $content-width;
-
-	@extend %clearfix;
+	height: $header-height;
+	/*@extend %clearfix;*/
 
 	@include media-query($smaller-screen) {
-		width: $base-width - 4%;
-		padding: 2%;
+		width: $responsive-width;
+		padding: $responsive-padding;
 	}
 }
 
@@ -40,6 +41,10 @@ Logo
 */
 #logo-container {
 	float: left;
+	@include media-query($smaller-mobile-screen) {
+		margin-left: 5px;
+		margin-top: 5px;
+	}
 }
 
 /*
@@ -74,8 +79,8 @@ main {
 	margin: $center;
 	@extend %clearfix;
 	@include media-query($smaller-screen) {
-		width: $base-width - 4%;
-		padding: 2%;
+		width: $responsive-width;
+		padding: $responsive-padding;
 	}
 }
 
@@ -106,27 +111,27 @@ Home page items
 	padding: 0;
 
 	&:nth-child(2) {
-		background-color: #7128b0;
+		background-color: $lighter-brand-color;
 	}
 
 	&:nth-child(3) {
-		background-color: #4b2070;
+		background-color: $light-brand-color;
 	}
 
 	&:nth-child(4) {
-		background-color: #2d1343;
+		background-color: $mid-brand-color;
 	}
 
 	&:nth-child(5) {
-		background-color: #7e4ca9;
+		background-color: $light-brand-color;
 	}
 
 	&:nth-child(6) {
-		background-color: #9a5ccf;
+		background-color: $mid-brand-color;
 	}
 
 	&:nth-child(7) {
-		background-color: #ad68e9;
+		background-color: $lighter-brand-color;
 	}
 
 	&:hover {
@@ -150,6 +155,10 @@ Page headlines
 	/*background-color: $header-background-color2;*/
 	height: $home-headline-height;
 	width: $base-width;
+
+	@include media-query($smaller-screen) {
+		height: $responsive-home-headline;
+	}
 }
 
 #home-headline-content {
@@ -158,8 +167,8 @@ Page headlines
 	height: 100%;
 	margin: $center;
 	@include media-query($smaller-screen) {
-		width: $base-width - 4%;
-		padding: 2%;
+		width: $responsive-width;
+		padding: $responsive-padding;
 	}
 }
 
@@ -175,7 +184,7 @@ Page headlines
   	 p {
   	 	margin-top: 20px;
   		font-family: $second-font-family;
-  		color: #fff;
+  		color: $headline-color;
   		font-size: 1.2rem;
   		font-weight: $base-font-weight;
   	}
@@ -187,27 +196,65 @@ Page headlines
 
   	h1 {
 		font-size: 2.6rem;
-		color: #fff;
+		color: $headline-color;
 		font-weight: $base-font-weight;
 	}
+
+	@include media-query($mobile-screen) {
+		h1 {
+			font-size: 2.0rem;
+		}
+		p {
+  	 		margin-top: 20px;
+  			font-size: 1.0rem;
+  		}
+
+  		p.lower {
+  			font-size: 0.8rem;
+  		}
+	}
+
+	@include media-query($smaller-mobile-screen) {
+		h1 {
+			font-size: 1.5rem;
+		}
+		p {
+  	 		margin-top: 20px;
+  			font-size: 1.0rem;
+  		}
+
+  		p.lower {
+  			font-size: 0.8rem;
+  		}
+	}
+
 }
 
 #page-headline {
 	margin-top: 0;
+	padding-bottom: 10px;
 	position: relative;
 	/*background-color: $header-background-color2;*/
 	height: $page-headline-height;
 	width: $base-width;
+	@include media-query($smaller-screen) {
+		width: $responsive-width;
+		padding: $responsive-padding;
+		height: $page-headline-height - 50px;
+	}
+	@extend %clearfix;
 }
 
 #page-headline-content {
 	position: relative;
+	margin-top: 0;
 	width: $content-width;
 	height: 100%;
 	margin: $center;
 	@include media-query($smaller-screen) {
-		width: $base-width - 4%;
-		padding: 2%;
+		width: $responsive-width;
+		padding: $responsive-padding;
+		height: 100%;
 	}
 }
 
@@ -217,13 +264,13 @@ Page headlines
 	width: auto;
 	left: 0;
   	right: 0;
-  	margin: 0 auto;
+  	margin: $center;
   	text-align: center;
 
   	 p {
-  	 	margin-top: 0px;
+  	 	margin-top: 10px;
   		font-family: $second-font-family;
-  		color: #fff;
+  		color: $headline-color;
   		font-size: 1.2rem;
   		font-weight: $base-font-weight;
   	}
@@ -235,8 +282,41 @@ Page headlines
 
   	h1 {
 		font-size: 2.6rem;
-		color: #fff;
+		color: $headline-color;
 		font-weight: $base-font-weight;
+	}
+
+	@include media-query($smaller-screen) {
+	bottom: 20px;
+	}
+
+	@include media-query($mobile-screen) {
+		h1 {
+			font-size: 2.0rem;
+		}
+		p {
+  	 		margin-top: 0px;
+  			font-size: 1.0rem;
+  		}
+
+  		p.lower {
+  			font-size: 0.8rem;
+  		}
+	}
+
+	@include media-query($smaller-mobile-screen) {
+		
+		h1 {
+			font-size: 1.5rem;
+		}
+		p {
+  	 		margin-top: 0px;
+  			font-size: 1.0rem;
+  		}
+
+  		p.lower {
+  			font-size: 0.8rem;
+  		}
 	}
 }
 
@@ -251,9 +331,25 @@ Page headlines
 /*
 Navigation
 */
+.menu-icon {
+	display: none;
+}
 nav {
+
 	float: right;
 	margin-top: 10px;
+
+	.menu-icon {
+		display: none;
+	}
+
+	.responsive {
+
+		width: auto;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
 
 	ul {
 		list-style-type: none;
@@ -274,11 +370,66 @@ nav {
 		font-size: 1.0rem;
 		line-height: 2.4rem;
 		font-weight: $base-font-weight;
-		color: #fff;
+		color: $headline-color;
 
 		&:hover {
 			color: $darker-brand-color;
 		}
+	}
+	@include media-query($smaller-mobile-screen) {
+		position: absolute;
+		top: 9px;
+		right: 10px;
+		height: auto;
+		width: auto;
+		background-color: $lighter-brand-color;
+		z-index: 1;
+		border-radius: 5px;
+		.menu-icon {
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			cursor: pointer; 
+			cursor: hand;
+			> svg path {
+        		fill: $headline-color;
+     		}
+		}
+		.responsive {
+			display: none;
+			clear: both;
+		}
+		ul {
+			margin-top: 40px;
+			li {
+				display: block;
+				text-align: right;
+				margin-right: 10px;
+
+				&:first-child {
+					padding-top: 10px;
+				}
+
+				&:last-child {
+					padding-bottom: 20px;
+				}
+			}
+
+		}
+
+		a { 
+			display: block;
+			margin-top: 0px;
+			line-height: 1.0rem;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		/*
+		&:hover .responsive {
+      		display: block;
+      		padding-bottom: 5px;
+    	}*/
 	}
 }
 
@@ -306,13 +457,16 @@ footer {
 		padding: 2%;
 		padding-top: 80px;
 	}
+	@include media-query($mobile-screen) {
+		padding-top: 30px;
+	}
 	@extend %clearfix;
 }
 
 #footer-top-border {
 	width: $base-width;
 	height: 50px;
-	background-color: $darker-brand-color2;
+	background-color: $mid-brand-color;
 	text-align: center;
 	color: #fff;
 	font-family: $second-font-family;
@@ -321,7 +475,7 @@ footer {
 	line-height: 50px;
 	margin-bottom: 0px;
 	&:hover {
-		background-color: $darker-brand-color3;
+		background-color: $light-brand-color;
 	}
 }
 
@@ -342,8 +496,11 @@ footer {
 	min-width: 300px;
 	margin-left: 50px;
 
-	@include media-query($smaller-screen) {
-		
+	@include media-query($mobile-screen) {
+		float: none;
+		margin-left: 0;
+		margin: $center;
+		margin-top: 50px;
 	}
 
 	h1 {
@@ -385,10 +542,10 @@ footer {
 		padding: 0;
 		text-decoration: none;
 		font-weight: 600;
-		color: #fff;
+		color: $headline-color;
 
 		&:hover {
-			color: $brand-color;
+			color: $mid-brand-color;
 		}
 	}
 
@@ -403,7 +560,7 @@ footer {
 		color: #fff;
 
 		&:hover {
-			color: $brand-color;
+			color: $mid-brand-color;
 		}
 	}
 
