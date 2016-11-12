@@ -2,9 +2,16 @@
 	<meta charset="utf-8">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta name="apple-mobile-web-app-status-bar-style" content="#4ac2ff">
-	<meta name="theme-color" content="#4ac2ff">
-	<link rel="icon" type="image/png" href="/assets/img/rooterfavicon.png">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="#b17174">
+	<meta name="theme-color" content="#b17174">
+
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:url" content="http://www.rooter.se/{{page.url}}" />
+	<meta property="og:image" content="/assets/img/bg/bg2.jpg" />
+
+	<link rel="icon" type="image/png" href="/assets/img/rooterfavicon-grey.png">
 
  	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
  	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">

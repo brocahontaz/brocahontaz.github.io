@@ -4,7 +4,7 @@ title:  "Page up and running!"
 date:   2016-11-04 12:56:00 +01:00
 comments: true
 categories: Rooter
-desc: Hejhopp
+desc: Welcome to the new Rooter.se
 author: Johan
 ---
 There we go, my new project page for 1DV022 is now up and running!

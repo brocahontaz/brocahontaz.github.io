@@ -434,6 +434,58 @@ nav {
 }
 
 /*
+Blog-page
+*/
+ul.post-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: relative;
+	li {
+		margin-bottom: 10px;
+		width: 100%;	
+	}
+	.post-meta {
+		font-family: $second-font-family;
+		font-size: 0.9rem;
+		color: $light-brand-color;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	.desc {
+		font-family: $second-font-family;
+		font-size: 1.0rem;
+	}
+
+	.author {
+		margin-top: 15px;
+		font-family: $second-font-family;
+		color: $mid-brand-color;
+		font-size: 0.8rem;
+	}
+
+	a.post-link {
+		color: $darker-brand-color;
+		text-decoration: none;
+
+		&:hover {
+			color: $mid-brand-color;
+		}
+	}
+}
+
+/*
+Blog-categories
+*/
+
+
+/*
 Footer
 */
 footer {
