@@ -31,7 +31,6 @@ linkdesc: Latest news about my work and studies
         	{{post.desc}}
     	</p>
     	<p class="author">
-        	Posted by <b>{{post.author}}</b> in 
         	<i>
         		{% for category in post.categories %}
         		{{ category }}
