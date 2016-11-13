@@ -25,6 +25,11 @@ github_username:  brocahontaz
 lang: en
 shortname: rooter-se
 
+authordesc: > # this means to ignore newlines until "markdown:"
+  Johan is the founder and creator of Rooter.se - which now acts as the main portal for his news, projects and contact. 
+  At the moment, he is studying at Linnéuniversitetet to be a devop. Since before, he has studied quite a lot of object oriented programming, 
+  and also self taught a bunch of web developing skills.
+
 # Build settings
 markdown: kramdown
 theme: 

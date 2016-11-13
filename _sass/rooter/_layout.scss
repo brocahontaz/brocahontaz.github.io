@@ -595,28 +595,38 @@ article.post {
 	@extend %clearfix;
 
 	img {
-		
 		width: 150px;
+		border: 3px solid $mid-brand-color;
 	}
 
 	.img-wrap {
+		text-align: center;
 		position: relative;
 		max-width: 150px;
 		float: left;
 		margin-right: 30px;
 		@extend %clearfix;
+		@include media-query($smaller-mobile-screen) {
+			margin: $center;
+			float: none;
+		}
+
 	}
 
 	.text-wrap {
 		float: left;
 		widtH: calc(100% - 180px);
-
+		@include media-query($smaller-mobile-screen) {
+			margin: $center;
+			float: none;
+			width: $base-width;
+		}
 	}
 
 	h1 {
 		font-size: 1.4rem;
 		line-height: 1.4rem;
-		margin-top: 20px;
+		margin-top: 10px;
 		margin-bottom: 10px;
 	}
 
@@ -626,8 +636,10 @@ article.post {
 		font-size: 0.9rem;
 	}
 
-	.follow-button {	
-		margin: 0 auto;
+	.follow-button {
+		float: none;
+		position: relative;
+		margin: $center;
 		margin-top: 10px;
 		background-color: $light-brand-color;
 		padding: 7px;
