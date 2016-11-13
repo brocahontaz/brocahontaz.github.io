@@ -45,6 +45,15 @@ Paragraphs
 /*
 Links
 */
+
+a {
+	color: $mid-brand-color;
+	text-decoration: none;
+	&:hover {
+		color: $darker-brand-color;
+	}	
+}
+
 a.white-to-dark {
 	color: #ffffff;
 	text-decoration: none;
@@ -56,6 +65,10 @@ a.white-to-dark {
 
 a.no-style {
 	text-decoration: none;
+}
+
+.treemap {
+	font-size: 0.8rem;
 }
 
 /*

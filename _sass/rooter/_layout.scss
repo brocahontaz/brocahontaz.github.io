@@ -65,6 +65,15 @@ main {
 	margin-bottom: 60px;
 	margin-top: 60px;
 	@extend %clearfix;
+	@include media-query($smaller-screen) {
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+
+	@include media-query($mobile-screen) {
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
 }
 
 #main-content.home {
@@ -95,9 +104,26 @@ main {
 	}
 
 	p {
+		font-family: $second-font-family;
+		font-size: 0.9rem;
+		line-height: 1.8rem;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	p.desc, p.author {
 		margin: 0;
 		padding: 0;
+	}
 
+	img.medium {
+		float: left;
+		width: 50%;
+	}
+
+	img.full {
+		float: left;
+		width: 100%;
 	}
 }
 
@@ -479,11 +505,142 @@ ul.post-list {
 		}
 	}
 }
+/*
+Horizontal-center
+*/
+.horizontal-center {
+	margin: $center;
+	text-align: center;
+	min-width: 100px;
+}
 
 /*
 Blog-categories
 */
+ul.blog-categories {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin: $center;
+	position: relative;
+	li {
+		margin: $center;
+		display: inline-block;
+		font-family: $second-font-family;
+		font-size: 0.8rem;
+		text-align: center;
+		background-color: $lighter-brand-color;
+		padding: 5px;
+		border-radius: 5px;
+		color: $headline-color;
+	}
+}
 
+/*
+Blog posts
+*/
+article.post {
+	position: relative;
+
+	header.post-header {
+		background-image: none;
+	}
+	h1.post-title {
+		font-family: $base-font-family;
+		display: none;
+	}
+	p.post-meta {
+		color: $mid-brand-color;
+	}
+	div.post-content {
+		h1, h2, h3, h4, h5 {
+			font-family: $base-font-family;
+			margin-top: 50px;
+		}
+
+		h1 {
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+		}
+
+		h2 {
+			font-size: 2.2rem;
+			line-height: 2.2rem;
+		}
+
+		h3 {
+			font-size: 1.8rem;
+			line-height: 1.8rem;
+		}
+
+		h4 {
+			font-size: 1.6rem;
+			line-height: 1.6rem;
+		}
+
+		h5 {
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+		}
+	}
+}
+
+.post-author {
+	position: relative;
+	width: $responsive-width;
+	padding: 2%;
+	background-color: #f6f6f6;
+	margin-bottom: 20px;
+	line-height: 1.2rem;
+	@extend %clearfix;
+
+	img {
+		
+		width: 150px;
+	}
+
+	.img-wrap {
+		position: relative;
+		max-width: 150px;
+		float: left;
+		margin-right: 30px;
+		@extend %clearfix;
+	}
+
+	.text-wrap {
+		float: left;
+		widtH: calc(100% - 180px);
+
+	}
+
+	h1 {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.author-description {
+		margin: 0;
+		padding: 0;
+		font-size: 0.9rem;
+	}
+
+	.follow-button {	
+		margin: 0 auto;
+		margin-top: 10px;
+		background-color: $light-brand-color;
+		padding: 7px;
+		border-radius: 5px;
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		box-shadow: none;
+		border: none;
+		color: $headline-color;
+		cursor: pointer; 
+		cursor: hand;
+	}
+}
 
 /*
 Footer
