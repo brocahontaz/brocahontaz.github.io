@@ -7,9 +7,9 @@ linkdesc: Latest news about my work and studies
 ---
 <div class="horizontal-center">
 <ul class="blog-categories">
-{% for category in site.categories %}
+{% for tag in site.tags %}
 	<li>
-		{{ category | first }}
+		{{ tag | first }}
 	</li>
 {% endfor %}
 </ul>
@@ -30,16 +30,12 @@ linkdesc: Latest news about my work and studies
         <p class="desc">
         	{{post.desc}}
     	</p>
-    	<p class="author">
-        	<i>
-        		{% for category in post.categories %}
-        		{{ category }}
-        		{% if forloop.last == false %}
-        		/
-				{% endif %}
+    	<div class="tags">
+            <span class="head">Tags:</span>
+        		{% for tag in post.tags %}
+        		{{ tag }}
         		{% endfor %}
-        	</i>
-    	</p>
+    	</div>
 </li>
 {% endfor %}
 </ul>

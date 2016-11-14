@@ -490,13 +490,6 @@ ul.post-list {
 		font-size: 1.0rem;
 	}
 
-	p.author {
-		font-family: $second-font-family;
-		color: $mid-brand-color;
-		font-size: 0.8rem;
-		line-height: 0.8rem;
-	}
-
 	a.post-link {
 		color: $darker-brand-color;
 		text-decoration: none;
@@ -505,6 +498,28 @@ ul.post-list {
 			color: $mid-brand-color;
 		}
 	}
+}
+.tags {
+	display: inline-block;
+	border: 1px solid $lighter-brand-color;
+	font-family: $second-font-family;
+	color: $darker-brand-color;;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+	width: auto;
+	padding: 5px 10px 5px 10px;
+	word-spacing: 10px;
+	span.head {
+		color: $lighter-brand-color;
+	}
+	&.post {
+		margin-bottom: 30px;
+	}
+}
+
+.treemap {
+	font-size: 0.8rem;
+	margin-bottom: 10px;
 }
 
 /*

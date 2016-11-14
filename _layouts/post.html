@@ -4,11 +4,11 @@ layout: default
 <div id="main-content">
 	<div id="main-content-wrapper">
 		<div id="main-content-text">
-			<span class="treemap">
-			<a href="/blog/">
-				<i class="fa fa-arrow-left" aria-hidden="true"></i> Back
-			</a> to blog index
-		</span>
+			<div class="treemap">
+				<a href="/blog/">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+				</a> to blog index
+			</div>
 			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 				<header class="post-header">
@@ -26,6 +26,14 @@ layout: default
 				<div class="post-content" itemprop="articleBody">
 					{{ content }}
 				</div>
+
+				<div class="tags post">
+            	<span class="head">Tags:</span>
+        			{% for tag in page.tags %}
+        			{{ tag }}
+        			{% endfor %}
+    		</div>
+
 				<div class="post-author">
 					<div class="img-wrap">
 					<img src="/assets/img/johan.png" alt="Johan">
