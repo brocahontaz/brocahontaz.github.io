@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Page up and running!"
-date:   2016-11-04 12:56:00 +01:00
+date:   2016-11-04 12:56:00 +0100
 comments: true
 categories: Rooter
 tags: Rooter UDM Linnéuniversitetet HTML CSS Jekyll Sass

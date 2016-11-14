@@ -67,9 +67,7 @@ a.no-style {
 	text-decoration: none;
 }
 
-.treemap {
-	font-size: 0.8rem;
-}
+
 
 /*
 Images
@@ -105,6 +103,39 @@ Images
 	padding: 0;
 	display: block;
 	border: 5px solid $headline-color;
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+margin: 0;
+	font-size: 1.0rem;
+	border-radius: 0;
+	background-color: #383838;
+	color: $headline-color;
+}
+
+code {
+	padding: 1px 5px;
+}
+
+pre {
+	padding: 12px 12px;
+	margin-bottom: 10px;
+	overflow-x: auto;
+
+	> code {
+		border: 0;
+		padding-right: 0;
+		padding-left: 0;
+  }
+}
+/* Just to make sure the pre tag doesn't have unnessecary margin/padding */
+figure {
+	margin: 0;
+	padding: 0;
 }
 
 /*

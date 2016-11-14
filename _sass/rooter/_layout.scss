@@ -98,7 +98,7 @@ main {
 	background-color: $content-background-color;
 	width: $content-text-width;
 	margin: $center;
-
+	@extend %clearfix;
 	@include media-query($mobile-screen) {
 		width: $base-width;
 	}
@@ -116,14 +116,34 @@ main {
 		margin-top: 0px;
 	}
 
-	img.medium {
+	img {
+		margin-top: 10px;
+		margin-bottom: 10px;
 		float: left;
-		width: 50%;
-	}
+		margin-left: 10px;
+		width: calc(100% - 20px);
+		&.small {
+			clear: right;
+			position: relative;
+			float: left;
+			max-width: calc((100% / 2) - 15px);
+			&.right {
+				margin-left: 0;
+				margin-right: 10px;
+				clear: left;
+				float: right;
+			}
+		}
 
-	img.full {
-		float: left;
-		width: 100%;
+		&.centered {
+			display: block;
+			margin-left: 0;
+			position: relative;
+			float: none;
+			margin: $center;
+			width: auto;
+			max-width: 80%;
+		}
 	}
 
 }
@@ -499,6 +519,10 @@ ul.post-list {
 		}
 	}
 }
+
+/*
+Display for tags
+*/
 .tags {
 	display: inline-block;
 	border: 1px solid $lighter-brand-color;
@@ -516,6 +540,10 @@ ul.post-list {
 		margin-bottom: 30px;
 	}
 }
+
+/*
+
+*/
 
 .treemap {
 	font-size: 0.8rem;
@@ -577,6 +605,7 @@ article.post {
 	}
 
 	div.post-content {
+		@extend %clearfix;
 		h1, h2, h3, h4, h5 {
 			font-family: $base-font-family;
 			margin-top: 50px;

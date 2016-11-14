@@ -24,6 +24,7 @@ twitter_username: brocahontaz
 github_username:  brocahontaz
 lang: en
 shortname: rooter-se
+timezone: Europe/Stockholm
 
 authordesc: > # this means to ignore newlines until "markdown:"
   Johan is the founder and creator of Rooter.se - which now acts as the main portal for his news, projects and contact. 
