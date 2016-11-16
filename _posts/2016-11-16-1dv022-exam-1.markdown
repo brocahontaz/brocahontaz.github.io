@@ -18,8 +18,18 @@ I built the website from scratch, to put my own stamp on it - and get it just th
 Below, you will find my answers for the first examination.
 
 ### Pre-compiling CSS
+With Sass, I used a bunch of neat stuff. For example; partials/imports, variables, mixins and extends. For me, pre-compiling CSS feels like a fresh breeze. It's really useful to be able to split the CSS files into 
+multiple and then just import them and merge to one - as opposed to either having a single really large file, or having to link several different in the HTML files. 
+
+I also enjoyed the more "programmer"-esque approach when dealing with sub-classes and such; being able to "nest" them inside the main attribute you deal with, instead of adding more lines etc. Variables also eases the work a lot. When having to change a value that is used for several attributes, you just change the value stored in the attribute instead of having to traverse all the code and find all places in need of replacement.
+
+The cons with using sass, and any other CSS pre-compiler, would mainly be that it has to be compiled before it can work, I guess. So, making a quick live edit isn't as easy as with regular CSS. And if you work on a team, everyone needs to use the same method/variation. Also, I noticed that it _can_ be easy to get a bit carried away - making the code less clean than it could be, defeating the purpose a bit.
+
+But all in all, using it the right way, it can really make the workflow with CSS a lot easier - and even more fun.
 
 ### Static site generators
+Using Jekyll marked a first for me, using a static site generator. The approach is quite a bit different from what I'm used to since before, having worked with both HTML and CSS a lot in the past.
+
 
 ### Robots.txt and its configuration
 
