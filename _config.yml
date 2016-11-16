@@ -23,7 +23,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: brocahontaz
 github_username:  brocahontaz
 lang: en
-shortname: brocahontaz
+shortname: rooter-se
 timezone: Europe/Stockholm
 
 authordesc: > # this means to ignore newlines until "markdown:"
