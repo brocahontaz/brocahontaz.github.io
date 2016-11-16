@@ -107,6 +107,20 @@ I have a separate file for the linking with Disqus, that I include in the layout
 
 To make use of Open Graph, the developer simply has to add an arbitrary amount of meta-tags. Arbitrary since it's up to the developer/owner/etc to decide what to include. There are four required properties for every page (title, type, image & url) - but a bunch of optional ones.
 
+These properties will then be displayed when sharing the page on Facebook, among other social media sites. This makes it easier to nitpick exactly what is to be displayed when someone shares the page.
+
+On this site, I have used the following OGP properties shown below.
+
+{% highlight jQuery %}
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:url" content="http://www.rooter.se/{{page.url}}" />
+<meta property="og:image" content="/assets/img/bg/bg2.jpg" />
+{% endhighlight %}
+
+
 [udm-devops]: http://udm-devops.se
 [linné]: http://www.lnu.se
 [1dv022]: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/
