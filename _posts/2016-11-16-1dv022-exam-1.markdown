@@ -4,37 +4,88 @@ title:  "1DV022 Exam 1"
 date:   2016-11-16 15:17:00 +0100
 comments: true
 categories: Rooter
-tags: 1DV022 Jekyll Sass HTML CSS Linnéuniversitetet
+tags: 1DV022 UDM Linnéuniversitetet Jekyll Sass HTML CSS
 desc: Blog post for exam 1 in the course 1DV022
 author: Johan
 permalink: /blog/:year/:month/:day/:title/
 ---
-This site was made during the course 1DV022 (Clientbased webprogramming) - as part of the first examination. The course is in turn part of my studies at the bachelors program UDM, at Linnéuniversitetet. It is meant to be the front for all our published assignments in mentioned course. 
+## The assignment
+This site was made during the course [1DV022 (Clientbased Webprogramming)][1dv022] - as part of the first examination. The course is in turn part of my studies at the bachelors program [UDM][udm-devops], at [Linnéuniversitetet][linné]. It is meant to be the front for all our published assignments in mentioned course. 
 
-Since before, I have had my own domain name meant to house my very own page, with a portfolio of my projects and such. I just haven't come around to make a proper site for it before. With that in mind, I decided to kill two birds with one stone, and developed the site for that cause too.
+#### To kill a bird.. or two
+Since before, I have had my own domain name ([rooter.se][rooter]) meant to house my very own page, with a portfolio of my projects and such. I just haven't come around to make a proper site for it before. With that in mind, I decided to kill two birds with one stone, and developed the site for that cause too.
 
 I built the website from scratch, to put my own stamp on it - and get it just the way I wanted to. Also, it was a no-brainer for me to make the site fully responsive when I were at it. 
 
 Below, you will find my answers for the first examination.
 
-### Pre-compiling CSS
-With Sass, I used a bunch of neat stuff. For example; partials/imports, variables, mixins and extends. For me, pre-compiling CSS feels like a fresh breeze. It's really useful to be able to split the CSS files into 
+## Pre-compiling CSS
+With [Sass][sass], I used a bunch of neat stuff. For example; partials/imports, variables, mixins and extends. For me, pre-compiling CSS feels like a fresh breeze. It's really useful to be able to split the CSS files into 
 multiple and then just import them and merge to one - as opposed to either having a single really large file, or having to link several different in the HTML files. 
 
+#### A more programming feel
 I also enjoyed the more "programmer"-esque approach when dealing with sub-classes and such; being able to "nest" them inside the main attribute you deal with, instead of adding more lines etc. Variables also eases the work a lot. When having to change a value that is used for several attributes, you just change the value stored in the attribute instead of having to traverse all the code and find all places in need of replacement.
 
+#### Cons
 The cons with using sass, and any other CSS pre-compiler, would mainly be that it has to be compiled before it can work, I guess. So, making a quick live edit isn't as easy as with regular CSS. And if you work on a team, everyone needs to use the same method/variation. Also, I noticed that it _can_ be easy to get a bit carried away - making the code less clean than it could be, defeating the purpose a bit.
 
+#### Finally
 But all in all, using it the right way, it can really make the workflow with CSS a lot easier - and even more fun.
 
-### Static site generators
-Using Jekyll marked a first for me, using a static site generator. The approach is quite a bit different from what I'm used to since before, having worked with both HTML and CSS a lot in the past.
+## Static site generators
+Using [Jekyll][jekyll] marked a first for me, using a static site generator. The approach is quite a bit different from what I'm used to since before, having worked with both HTML, CSS and PHP a lot in the past. 
+For me, being able to import files - and therefore the ability to split for example the header, content and footer into different files and then include/merge them into one - wasn't new. This thanks to my past, and present, work with PHP. And that goes for for loops, if/else statements and the likes, too.
 
+#### Still a lot of uses
+Although much of this regarding web development have been readily available for me with e.g. PHP, I can still really see the use of using a static site processor such as Jekyll.
 
-### Robots.txt and its configuration
+If what needed for a site doesn't necessarily include some sort of registration and/or login functionality, and nothing really needs to be stored in a database, an ssg could be the superior option in many regards.
 
-### Humans.txt and its configuration
+## Robots.txt and its configuration
+_The Robots Exclusion Protocol (Robots.txt in short)_ is a standard for communication between websites and web crawlers/robots. Its purpose is to allow the owner/developer of a site to disallow (or allow) certain (or all) web crawlers to visit certain (or all) pages on the site. It should not be used to hide information though, as malicious robots can easily ignore it. Another thing to consider is that it is also a public file.
 
-### Using Disqus for comments
+Below, you can see the robots.txt for this site.
 
-### Social media sharing with Open Graph
+{% highlight markdown %}
+User-agent: *
+Disallow: /
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 10
+{% endhighlight %}
+
+As apparent by this code, I chose to only allow Googles web crawler, and for all of the pages. I also set a delay to 10 seconds.
+
+## Humans.txt and its configuration
+
+Humans.txt is an initiative, rather than a standard. It's nothing mandatory at all, but considering how easy it is to add to a site and the fact that it doesn't affect the code in any way, there's no real downside to it either.
+
+{% highlight markdown %}
+/* TEAM */
+	Owner: Johan Andersson
+	Contact: johan [at] rooter.se
+	Twitter: @brocahontaz
+	Github: @brocahontaz
+	From: Höör, Skåne, Sweden
+	Location: Göteborg, Västra Götalands Län, Sweden
+
+/* THANKS */
+	Education: www.udm-devops.se
+
+/* SITE */
+	Last update: 2016/11/16 
+	Standards: HTML5, CSS3
+	Components: jQuery, Disqus
+	Software: Jekyll, Sass, Sublime Text 2, Photoshop
+{% endhighlight %}
+
+## Using Disqus for comments
+
+## Social media sharing with Open Graph
+
+[udm-devops]: http://udm-devops.se
+[linné]: http://www.lnu.se
+[1dv022]: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/
+[sass]: http://sass-lang.com/
+[jekyll]: https://jekyllrb.com/
+[rooter]: http://rooter.se

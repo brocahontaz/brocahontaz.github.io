@@ -12,5 +12,5 @@
 /* SITE */
 	Last update: 2016/11/16 
 	Standards: HTML5, CSS3
-	Components: jQuery
+	Components: jQuery, Disqus
 	Software: Jekyll, Sass, Sublime Text 2, Photoshop
