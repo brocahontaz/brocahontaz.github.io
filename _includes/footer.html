@@ -1,8 +1,16 @@
+{% if page.title != 'ABOUT' %}
 <a href="/about/" class="no-style">
 	<div id="footer-top-border">
 		Learn more about Johan &#187;
 	</div>
 </a>
+{% else %}
+<a href="/contact/" class="no-style">
+	<div id="footer-top-border">
+		Contact Johan &#187;
+	</div>
+</a>
+{% endif %}
 <footer>
 	<div id="footer-content">
 		<div id="footer-content-wrapper">

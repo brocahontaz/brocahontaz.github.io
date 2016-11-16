@@ -9,18 +9,18 @@ desc: Let's try them out, shall we!
 author: Johan
 permalink: /blog/:year/:month/:day/:title/
 ---
-![Medium image](/assets/img/bg/bg2.jpg)
+![Large image](/assets/img/bg/bg2.jpg)
 
 Testing a large image, stretching all the way over the text field.
 
-![Medium image](/assets/img/bg/bg2.jpg){: .small }
-![Medium image](/assets/img/bg/bg2.jpg){: .small }
+![Small image](/assets/img/bg/bg2.jpg){: .small }
+![Small image](/assets/img/bg/bg2.jpg){: .small }
 
 Testing smaller images.
 
-![Medium image](/assets/img/bg/bg2.jpg){: .centered }
+![Centered image](/assets/img/bg/bg2.jpg){: .centered }
 
 Testing centered image with max width.
 
-![Medium image](/assets/img/bg/bg2.jpg){: .small.right }
+![Small right image](/assets/img/bg/bg2.jpg){: .small.right }
 Testing with a small image, but floating it to the right.

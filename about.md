@@ -81,6 +81,8 @@ The theme and content is custom made by myself.
 
 HTML5, CSS3 and some simple JQuery scripts have been used to make this my new home.
 
+![Showcase image](/assets/img/showcase.png)
+This site is made fully responsive for all modern devices- something I implement with all of my work.
 </div></article>
 
 [udm-devops]: http://udm-devops.se
