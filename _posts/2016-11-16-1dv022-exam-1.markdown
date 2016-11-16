@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "1DV022 Exam 1"
+date:   2016-11-16 15:17:00 +0100
+comments: true
+categories: Rooter
+tags: 1DV022 Jekyll Sass HTML CSS Linnéuniversitetet
+desc: Blog post for exam 1 in the course 1DV022
+author: Johan
+permalink: /blog/:year/:month/:day/:title/
+---
+This site was made during the course 1DV022 (Clientbased webprogramming) - as part of the first examination. The course is in turn part of my studies at the bachelors program UDM, at Linnéuniversitetet. It is meant to be the front for all our published assignments in mentioned course. 
+
+Since before, I have had my own domain name meant to house my very own page, with a portfolio of my projects and such. I just haven't come around to make a proper site for it before. With that in mind, I decided to kill two birds with one stone, and developed the site for that cause too.
+
+I built the website from scratch, to put my own stamp on it - and get it just the way I wanted to. Also, it was a no-brainer for me to make the site fully responsive when I were at it. 
+
+Below, you will find my answers for the first examination.
+
+### Pre-compiling CSS
+
+### Static site generators
+
+### Robots.txt and its configuration
+
+### Humans.txt and its configuration
+
+### Using Disqus for comments
+
+### Social media sharing with Open Graph

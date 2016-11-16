@@ -1,0 +1,16 @@
+/* TEAM */
+	Owner: Johan Andersson
+	Contact: johan [at] rooter.se
+	Twitter: @brocahontaz
+	Github: @brocahontaz
+	From: Höör, Skåne, Sweden
+	Location: Göteborg, Västra Götalands Län, Sweden
+
+/* THANKS */
+	Education: www.udm-devops.se
+
+/* SITE */
+	Last update: 2016/11/16 
+	Standards: HTML5, CSS3
+	Components: jQuery
+	Software: Jekyll, Sass, Sublime Text 2, Photoshop
