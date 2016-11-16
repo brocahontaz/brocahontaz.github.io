@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Homepage for Johan Andersson, a devop student at Linnéuniversitetet. 
   Latest news and projects are posted here.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://brocahontaz.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: brocahontaz
 github_username:  brocahontaz
 lang: en
