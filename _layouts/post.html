@@ -45,8 +45,14 @@ layout: default
 					<h1>Written by {{page.author}}</h1>
 					<span class="author-description">{{site.authordesc}}</span>
 					</div>
-					
 				</div>
+
+				<div class="treemap">
+				<a href="/blog/">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+				</a> to blog index
+				</div>
+
 				<h3>Comments</h3>
 				{% if site.shortname %}
 				{% include disqus_comments.html %}

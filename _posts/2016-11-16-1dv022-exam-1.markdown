@@ -34,12 +34,30 @@ But all in all, using it the right way, it can really make the workflow with CSS
 
 ## Static site generators
 Using [Jekyll][jekyll] marked a first for me, using a static site generator. The approach is quite a bit different from what I'm used to since before, having worked with both HTML, CSS and PHP a lot in the past. 
-For me, being able to import files - and therefore the ability to split for example the header, content and footer into different files and then include/merge them into one - wasn't new. This thanks to my past, and present, work with PHP. And that goes for for loops, if/else statements and the likes, too.
+For me, being able to import files - and therefore the ability to split for example the header, content and footer into different files and then include/merge them into one - wasn't new. This thanks to my past, and present, work with PHP. And that goes for for loops, variables, if/else statements and the likes, too.
 
 #### Still a lot of uses
-Although much of this regarding web development have been readily available for me with e.g. PHP, I can still really see the use of using a static site processor such as Jekyll.
+Although much of this functionality regarding web development have been readily available for me with e.g. PHP, I can still really see the use of using a static site processor such as Jekyll.
 
-If what needed for a site doesn't necessarily include some sort of registration and/or login functionality, and nothing really needs to be stored in a database, an ssg could be the superior option in many regards.
+If what needed for a site doesn't necessarily include some sort of registration and/or login functionality, and nothing really needs to be stored in a database (which means PHP would/could be uncalled-for), an ssg could be the superior option in many regards. As mentioned above, the possibility to use loops, if/else-statements, variables and arrays is made possible while using Jekyll. Adding to that is partials/imports which - much like with e.g. Sass for CSS - can ease the work a lot. For example, instead of changing something in the navigation in every file, you can have one file containing the menu and then just include that in all the pages. That means you only have to change it at one place, which can save a lot of time.
+
+One of the main advantages in my opinion would be exactly what the name implies - that it _is_ a static site generator. Instead of having to create new HTML files for every page and piece of content, the use of layout templates and markdown files for content can really speed up the productivity. This makes it feel less daunting when dealing with sites with a lot of content and menu options (since you can make the menu auto-generate, too).
+
+To handle the sites different element is easier, as the code becomes more transparent. And when dealing with content while using the layout + markdown method, you don't have to have lots of HTML in the same file. This also makes adding and handling content easier.
+
+#### Finally
+Using an ssg such as Jekyll is best suited for sites that in fact are static, but still could benefit from having things like the menu and content generated with predesigned templates. Sites that have new content posted and/or updated regularly, where the generation of the HTML files is a big benefit with an ssg. Handling a site with updates can easily get out of hand when using plain coding, since every file has to be updated and rearranged for every single update.
+
+Oh, and of course, another major advantage of using an ssg instead of e.g. PHP is that it is much safer regarding eventual "hacking", since there is no user input directly towards your site.
+
+One category of sites that easily falls under these conditions is of course..
+
+##### ..blogs!
+Blogs doesn't necessarily need the functionality that PHP and databases can offer - there's really no apparent reason for them to be dynamic if they don't have need for more intricate functionality. And having to change a lot of different files for each and every update slows down the workflow - hinders the purpose of the blog.
+
+Here, an ssg like Jekyll really comes into its own. When everything is set up according to preferences, it's really easy to post new content, update and remove.
+
+And for myself, I can certainly imagine using it for more projects besides this - with the condition that it is in fact a static site I'm building.
 
 ## Robots.txt and its configuration
 _The Robots Exclusion Protocol (Robots.txt in short)_ is a standard for communication between websites and web crawlers/robots. Its purpose is to allow the owner/developer of a site to disallow (or allow) certain (or all) web crawlers to visit certain (or all) pages on the site. It should not be used to hide information though, as malicious robots can easily ignore it. Another thing to consider is that it is also a public file.
@@ -80,8 +98,14 @@ Humans.txt is an initiative, rather than a standard. It's nothing mandatory at a
 {% endhighlight %}
 
 ## Using Disqus for comments
+Since this is intended to be a static site, I decided to go with the well known alternative [Disqus][disqus] to implement and make available commenting for blog posts. It's easy to setup and manage, and felt like the best option.
+
+I have a separate file for the linking with Disqus, that I include in the layout for posts. Inside that file, I also have a check for if comments is set to _true_ or _false_ in each posts [YAML][yaml] Front Matter. The outcome of that should be pretty obvious (displaying comments only if set to _true_).
 
 ## Social media sharing with Open Graph
+[Open Graph][ogp] is a tool (or rather, a protocol) that enables developers to integrate their pages into the social graph - the web page turn into a rich object. This is used on social medias such as Facebook and Twitter.
+
+To make use of Open Graph, the developer simply has to add an arbitrary amount of meta-tags. Arbitrary since it's up to the developer/owner/etc to decide what to include. There are four required properties for every page (title, type, image & url) - but a bunch of optional ones.
 
 [udm-devops]: http://udm-devops.se
 [linné]: http://www.lnu.se
@@ -89,3 +113,6 @@ Humans.txt is an initiative, rather than a standard. It's nothing mandatory at a
 [sass]: http://sass-lang.com/
 [jekyll]: https://jekyllrb.com/
 [rooter]: http://rooter.se
+[disqus]: https://disqus.com/
+[yaml]: http://yaml.org/
+[ogp]: http://ogp.me/
