@@ -9,9 +9,9 @@ linkdesc: Learn more about Johan and Rooter.se
 <div class="post-author">
 	<div class="img-wrap">
 		<img src="/assets/img/johan.png" alt="Johan">
-		<a href="http://www.twitter.com/{{site.twitter_username}}" target="_blank">
-			<button class="follow-button" type="button"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;@{{site.twitter_username}}</button>
-		</a>
+		<form action="http://www.twitter.com/{{site.twitter_username}}" target="_blank">
+			<button class="follow-button" type="submit"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;@{{site.twitter_username}}</button>
+		</form>
 	</div>
 	<div class="text-wrap">
 		<h1>Background</h1>
@@ -71,7 +71,7 @@ As of now, the main programming language I have studied and used is Java. With J
 ### Studies
 In the past, I have studied a bunch of courses at LTH in Lund. This includes object oriented programming with mainly Java, relational databases and computer security.
 
-At the moment, I am attending my first year at Linnéuniversitetet studying to be a [devop][udm-devops]. What is a devop, you might ask? Devop is short for developer/operator, and this means
+At the moment, I am attending my first year at [Linnéuniversitetet][linné] studying to be a [devop][udm-devops]. What is a devop, you might ask? Devop is short for developer/operator, and this means
 that I am studying to be a software developer - but also an operator. Someone who can both develop software, and then administrate it. And that, that is just what I like.
 
 ### This site
@@ -87,3 +87,4 @@ This site is made fully responsive for all modern devices - functionality that I
 
 [udm-devops]: http://udm-devops.se
 [hajtek]: http://dev.hajtek.se/new
+[linné]: http://lnu.se

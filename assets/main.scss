@@ -19,6 +19,7 @@ $darkest-brand-color: #2f153f;
 // Background
 $background-color: #2d2d2d;
 $content-background-color: #fff;
+$portfolio-background-color: #efefef;
 
 $background-image: url('/assets/img/bg/bg2.jpg');
 
@@ -58,6 +59,11 @@ $responsive-home-headline: calc(100vh - 50px);
 // Media queries
 @mixin media-query($device) {
 	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+@mixin media-query-masonry($device) {
+	@media screen and (min-width: $device) {
 		@content;
 	}
 }

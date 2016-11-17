@@ -77,6 +77,7 @@ main {
 }
 
 #main-content.home {
+	background-color: $portfolio-background-color;
 	margin-top: 0px;
 	padding-bottom: 60px;
 }
@@ -185,6 +186,45 @@ Home page items
 		.home-item-img {
 			
 		}
+	}
+}
+
+.masonry-layout {
+	width: $responsive-width;
+	margin: $center;
+	padding: $responsive-padding;
+	-moz-column-width: 13em;
+	-webkit-column-width: 13em;
+	-moz-column-gap: 0.5em;
+	-webkit-column-gap: 0.5em;
+	background-color: $portfolio-background-color;
+
+	section {
+		display: inline-block;
+		margin: 0.5em;
+		padding:  1em;
+		width:  100%; 
+		background-color:  #fff;
+		font-family: $second-font-family;
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border-radius: 5px;
+
+		&:hover {
+			background-color: lightgrey;
+		}
+	}
+
+	h2 {
+		font-size: 1.0rem;
+		margin-top: 10px;
+	}
+
+	p {
+		font-size: 0.8rem;
 	}
 }
 
@@ -490,7 +530,7 @@ ul.post-list {
 	width: 100%;
 	position: relative;
 	li {
-		margin-bottom: 10px;
+		margin-bottom: 50px;
 		width: 100%;	
 	}
 	.post-meta {
