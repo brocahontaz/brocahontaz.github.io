@@ -4,6 +4,7 @@ title: BLOG
 permalink: /blog/
 desc: Latest thoughts and news
 linkdesc: Latest news about my work and studies
+description: Latest news about my work and studies
 ---
 <div class="horizontal-center">
 <ul class="blog-categories">

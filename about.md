@@ -3,6 +3,7 @@ layout: page
 title: ABOUT
 permalink: /about/
 desc: A Linnéuniversity student
+description: Learn more about Johan and Rooter.se
 linkdesc: Learn more about Johan and Rooter.se
 ---
 
