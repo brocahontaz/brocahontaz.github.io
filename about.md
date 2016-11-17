@@ -88,3 +88,4 @@ This site is made fully responsive for all modern devices - functionality that I
 [udm-devops]: http://udm-devops.se
 [hajtek]: http://dev.hajtek.se/new
 [linné]: http://lnu.se
+[hajtek]: http://dev.hajtek.se/new
